@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next"
 import { useState } from "react";
 import { StartScreen } from "./StartScreen";
 import { QuestionScreen } from "./QuestionScreen";
@@ -56,6 +57,7 @@ function App() {
       {step === "result" && result && (
         <ResultScreen characterId={result} onRestart={handleRestart} />
       )}
+      <Analytics />
     </div>
   );
 }
